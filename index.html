@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Classic - Classic Number Puzzle Game</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; color: #333; background: #FAFAFA; }
+
+        /* Hero */
+        .hero { background: linear-gradient(135deg, #FF6B35 0%, #F7931E 50%, #FFB347 100%); padding: 80px 20px; text-align: center; }
+        .hero-icon { width: 100px; height: 100px; background: #fff; border-radius: 22px; display: inline-flex; align-items: center; justify-content: center; font-size: 48px; font-weight: 900; color: #FF6B35; box-shadow: 0 8px 32px rgba(0,0,0,0.15); margin-bottom: 24px; line-height: 1; }
+        .hero h1 { color: #fff; font-size: 42px; font-weight: 800; letter-spacing: -0.5px; }
+        .hero .tagline { color: rgba(255,255,255,0.9); font-size: 18px; margin-top: 8px; }
+        .hero .store-badge { display: inline-block; margin-top: 30px; background: #000; color: #fff; padding: 12px 28px; border-radius: 30px; text-decoration: none; font-size: 16px; font-weight: 600; }
+        .hero .store-badge:hover { background: #222; }
+
+        /* Features */
+        .features { max-width: 900px; margin: 0 auto; padding: 60px 20px; }
+        .features h2 { text-align: center; font-size: 28px; margin-bottom: 40px; color: #222; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 30px; }
+        .feature-card { background: #fff; border-radius: 16px; padding: 30px; text-align: center; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+        .feature-icon { font-size: 36px; margin-bottom: 12px; }
+        .feature-card h3 { font-size: 17px; margin-bottom: 8px; color: #222; }
+        .feature-card p { font-size: 14px; color: #666; line-height: 1.5; }
+
+        /* Screenshots */
+        .screenshots { background: #fff; padding: 60px 20px; }
+        .screenshots h2 { text-align: center; font-size: 28px; margin-bottom: 40px; color: #222; }
+        .screenshots-scroll { display: flex; gap: 20px; overflow-x: auto; padding: 0 40px 20px; justify-content: center; flex-wrap: wrap; max-width: 1100px; margin: 0 auto; }
+        .screenshot-item { text-align: center; flex-shrink: 0; }
+        .screenshot-item img { width: 260px; height: auto; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.12); }
+        .screenshot-item .caption { margin-top: 12px; font-size: 14px; color: #888; font-weight: 500; }
+
+        /* Game details */
+        .details { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
+        .details h2 { font-size: 28px; margin-bottom: 20px; color: #222; }
+        .details p { font-size: 15px; line-height: 1.7; color: #555; margin-bottom: 16px; }
+        .details ul { padding-left: 20px; margin-bottom: 16px; }
+        .details li { font-size: 15px; line-height: 1.7; color: #555; margin-bottom: 6px; }
+
+        /* Footer */
+        footer { background: #222; color: #aaa; padding: 40px 20px; text-align: center; font-size: 13px; }
+        footer a { color: #FF6B35; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        footer .links { margin-bottom: 16px; }
+        footer .links a { margin: 0 16px; }
+        footer .copyright { color: #666; margin-top: 8px; }
+    </style>
+</head>
+<body>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-icon">9</div>
+    <h1>Sudoku Classic</h1>
+    <p class="tagline">The classic number puzzle you love, reimagined for iPhone</p>
+</section>
+
+<!-- Features -->
+<section class="features">
+    <h2>Why You'll Love It</h2>
+    <div class="features-grid">
+        <div class="feature-card">
+            <div class="feature-icon">🧩</div>
+            <h3>50 Handcrafted Levels</h3>
+            <p>Four difficulty tiers from Easy to Expert, with progressive challenge that grows with you.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">✈️</div>
+            <h3>100% Offline</h3>
+            <p>No internet required. Play anywhere, anytime — on a plane, on a train, or in your favorite chair.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <h3>Clean &amp; Focused</h3>
+            <p>No ads, no in-app purchases, no distractions. Just pure Sudoku the way it was meant to be.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🏆</div>
+            <h3>Track Your Progress</h3>
+            <p>Star ratings, score tracking, and error counting help you measure improvement over time.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🎨</div>
+            <h3>Beautiful Design</h3>
+            <p>Vibrant colors, smooth animations, and a polished interface designed for iPhone.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">⏱️</div>
+            <h3>Timer &amp; Scoring</h3>
+            <p>Built-in timer with difficulty-based scoring. Challenge yourself to beat your best time.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Screenshots -->
+<section class="screenshots">
+    <h2>See It In Action</h2>
+    <div class="screenshots-scroll">
+        <div class="screenshot-item">
+            <img src="screenshots/01_main_menu.png" alt="Sudoku Classic Main Menu">
+            <div class="caption">Main Menu</div>
+        </div>
+        <div class="screenshot-item">
+            <img src="screenshots/02_level_select.png" alt="Level Select Screen">
+            <div class="caption">Level Select</div>
+        </div>
+        <div class="screenshot-item">
+            <img src="screenshots/03_gameplay.png" alt="Sudoku Gameplay">
+            <div class="caption">Gameplay</div>
+        </div>
+        <div class="screenshot-item">
+            <img src="screenshots/04_victory.png" alt="Victory Screen">
+            <div class="caption">Victory!</div>
+        </div>
+        <div class="screenshot-item">
+            <img src="screenshots/05_settings.png" alt="Settings Screen">
+            <div class="caption">Settings</div>
+        </div>
+    </div>
+</section>
+
+<!-- Details -->
+<section class="details">
+    <h2>About Sudoku Classic</h2>
+    <p>Sudoku Classic brings the timeless logic puzzle to your iPhone with a beautiful, distraction-free experience. Whether you're a beginner learning the ropes or an expert seeking a challenge, our 50 levels across four difficulty tiers have something for everyone.</p>
+
+    <h2>Key Features</h2>
+    <ul>
+        <li><strong>50 Levels</strong> across Easy, Medium, Hard, and Expert difficulties</li>
+        <li><strong>Progressive difficulty</strong> — levels get harder as you advance within each tier</li>
+        <li><strong>Undo &amp; Redo</strong> — never worry about mistakes</li>
+        <li><strong>Note mode</strong> — pencil in candidates to solve tougher puzzles</li>
+        <li><strong>Smart error detection</strong> — know instantly when you've gone wrong</li>
+        <li><strong>Star ratings</strong> — earn up to 3 stars per level</li>
+        <li><strong>Sound effects &amp; haptics</strong> — satisfying audio feedback</li>
+        <li><strong>No internet required</strong> — play completely offline</li>
+        <li><strong>No ads, no in-app purchases</strong> — a clean, premium experience</li>
+    </ul>
+
+    <h2>Technical Support</h2>
+    <p>For questions, bug reports, or feedback, please contact us at <a href="mailto:support@sudokuclassic.app">support@sudokuclassic.app</a>.</p>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="mailto:support@sudokuclassic.app">Contact Support</a>
+    </div>
+    <p>&copy; 2026 Sudoku Classic. All rights reserved.</p>
+    <p class="copyright">Sudoku Classic is a product of Sudoku Classic. Apple, iPhone, and App Store are trademarks of Apple Inc.</p>
+</footer>
+
+</body>
+</html>
